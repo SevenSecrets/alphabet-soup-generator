@@ -1,7 +1,7 @@
 var generator = require('../alphabet-generator');
 
 describe('generator tests', () => {
-  it('can be run', () => {
-    expect(generator.generate()).toBeDefined();
+  it('generates a string', () => {
+    expect(generator()).toEqual(jasmine.any(String));
   });
 });

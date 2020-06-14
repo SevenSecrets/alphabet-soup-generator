@@ -11,9 +11,10 @@ var options = {
   }
 }
 
-markov.buildCorpus();
-var result = markov.generate(options);
+var generator = () => {
+  markov.buildCorpus();
+  var result = markov.generate(options);
+  return result.string
+}
 
-console.log(result);
-
-module.exports;
+module.exports = generator;
