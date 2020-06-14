@@ -1,4 +1,4 @@
-var generator = require('../alphabet-generator');
+const generator = require('../alphabet-generator');
 
 describe('generator tests', () => {
   it('generates a string', () => {
