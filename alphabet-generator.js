@@ -7,7 +7,7 @@ var options = {
   maxTries: 50,
   prng: Math.random,
   filter: (res) => {
-    return res.string.split(' ').length <= 5
+    return (res.string.split(' ').length <= 5) && (res.string.split(' ').length >= 3)
   }
 }
 
