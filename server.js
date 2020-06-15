@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
   res.send(200)
 })
 
+app.post('/generate', (req, res) => {
+  res.send(generator())
+})
+
 app.listen(port, () => console.log('Server listening at port', port))
 
 module.exports = app;
