@@ -18,7 +18,7 @@ var generator = () => {
     console.log("retrying");
     var result = markov.generate(options);
   }
-  console.log(result);
+  // console.log(result);  enable this for monitoring the quality of results
   return result.string
 }
 
