@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
   res.send(200)
 })
 
-app.post('/generate', (req, res) => {
+app.get('/generate', (req, res) => {
+  console.log(generator());
   res.send(generator())
 })
 
