@@ -14,7 +14,8 @@ var options = {
 var generator = () => {
   markov.buildCorpus();
   var result = markov.generate(options);
-  while (result.refs.length < 2) {
+  var isRepeat = corpus.list.includes(result.string);
+  while (result.refs.length < 2 && isRepeat) {
     console.log("retrying");
     var result = markov.generate(options);
   }

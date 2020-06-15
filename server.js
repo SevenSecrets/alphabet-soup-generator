@@ -11,7 +11,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/generate', (req, res) => {
-  console.log(generator());
   res.send(generator())
 })
 
