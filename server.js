@@ -2,6 +2,8 @@ const express = require('express');
 const generator = require('./alphabet-generator');
 
 const app = express();
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const port = 3000;
 
 app.use(express.static(__dirname));
@@ -14,6 +16,6 @@ app.get('/generate', (req, res) => {
   res.send(generator())
 })
 
-app.listen(port, () => console.log('Server listening at port', port))
+http.listen(port, () => console.log('Server listening at port', port))
 
 module.exports = app;

@@ -11,7 +11,8 @@
   "dependencies": {
     "express": "^4.17.1",
     "markov-strings": "^2.1.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
   },
   "devDependencies": {
     "jasmine": "^3.5.0",
